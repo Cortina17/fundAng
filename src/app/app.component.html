@@ -20,11 +20,14 @@
   <li *ngFor="let banda of rockBands">{{banda}}</li>
 </ol>
 
+<br><br>
 <marquee direction="right">LOL</marquee>
+<br><br>
 
 <!--*ngIf-->
 <div *ngIf="verCantidadBandas() > 8; else elseBlock">Hay más de una banda</div>
 <ng-template #elseBlock>Hay menos de 8 bandas</ng-template>
+<br><br>
 
 <!--*ngSwitch-->
 <hr>
@@ -34,6 +37,8 @@
   <span *ngSwitchCase="6">Hay más de 6 bandas</span>
 </div>
 <hr>
+<br><br>
+
 <!-- *ngModel-->
 <!-- ngModel se debe agregar en el app.module.ts,
 en el import de @NgModule ...FormsModule -->
@@ -41,6 +46,7 @@ en el import de @NgModule ...FormsModule -->
 <input type="text" [(ngModel)]="rockBandName">{{rockBandName}}
 <button (click)="agregarNuevaBanda()">Agregar banda</button>
 
+<br><br>
 <!--ENLACES
 ONE WAY ...() O [] o {{}}
 TWO WAY [()]
@@ -48,3 +54,19 @@ TWO WAY [()]
 (ngModel) ==> va desde el html al componente (sube)
 [ngModel] ==> viene desde el componente al html (baja)
 -->
+<br>
+<br>
+
+<select [(ngModel)]="seleccion">
+  <option value="BMW">BMW</option>
+  <option value="Ford">Ford</option>
+  <option value="KIA">KIA</option>
+  <option value="Audi">Audi</option>
+</select>{{seleccion}}
+
+<select (value)="seleccion" (change)="seleccion =$event.target.value">
+  <option value="BMW">BMW</option>
+  <option value="Ford">Ford</option>
+  <option value="KIA">KIA</option>
+  <option value="Audi">Audi</option>
+</select>{{seleccion}}

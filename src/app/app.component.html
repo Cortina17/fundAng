@@ -23,15 +23,20 @@
 <marquee direction="right">LOL</marquee>
 
 <!--*ngIf-->
-<div *ngIf="verCantidadBandas() > 8; else elseBlock">Hay más de tres bandas</div>
+<div *ngIf="verCantidadBandas() > 8; else elseBlock">Hay más de una banda</div>
 <ng-template #elseBlock>Hay menos de 8 bandas</ng-template>
 
 <!--*ngSwitch-->
 <hr>
 <div [ngSwitch]="verCantidadBandas()">
   <span *ngSwitchCase="4">Hay más de 4 bandas</span>
-  <span *ngSwitchCase="5">Hay más de 4 bandas</span>
-  <span *ngSwitchCase="6">Hay más de 4 bandas</span>
+  <span *ngSwitchCase="5">Hay más de 5 bandas</span>
+  <span *ngSwitchCase="6">Hay más de 6 bandas</span>
 </div>
-
+<hr>
 <!-- *ngModel-->
+<!-- ngModel se debe agregar en el app.module.ts,
+en el import de @NgModule ...FormsModule -->
+
+<input type="text" [(ngModel)]="rockBandName">{{rockBandName}}
+<button (click)="agregarNuevaBanda()">Agregar banda</button>

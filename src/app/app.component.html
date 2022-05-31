@@ -25,3 +25,13 @@
 <!--*ngIf-->
 <div *ngIf="verCantidadBandas() > 8; else elseBlock">Hay más de tres bandas</div>
 <ng-template #elseBlock>Hay menos de 8 bandas</ng-template>
+
+<!--*ngSwitch-->
+<hr>
+<div [ngSwitch]="verCantidadBandas()">
+  <span *ngSwitchCase="4">Hay más de 4 bandas</span>
+  <span *ngSwitchCase="5">Hay más de 4 bandas</span>
+  <span *ngSwitchCase="6">Hay más de 4 bandas</span>
+</div>
+
+<!-- *ngModel-->

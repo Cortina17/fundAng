@@ -9,11 +9,18 @@ export class AppComponent {
   title = 'Angular';
   rockBands = ["AC/DC", "Nirvana", "Metallica", "Guns 'N' roses", "Iron Maiden", "El Canto del Loco"];
 
+  rockBandName = "";
+
   changeTitle() {
     this.title = "Nuevo título";
   }
 
   verCantidadBandas(): number {
     return this.rockBands.length;
+  }
+
+  agregarNuevaBanda() {
+    this.rockBands.push(this.rockBandName);
+    this.rockBandName = "";
   }
 }

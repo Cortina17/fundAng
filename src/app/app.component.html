@@ -12,5 +12,16 @@
 <button (click)="changeTitle()">Nuevo título</button>
 
 <!--DIRECTIVAS DE ESTRUCTURA-->
+
 <!--*ngFor-->
 <p>Hay {{verCantidadBandas()}} bandas de rock.</p>
+
+<ol>
+  <li *ngFor="let banda of rockBands">{{banda}}</li>
+</ol>
+
+<marquee direction="right">LOL</marquee>
+
+<!--*ngIf-->
+<div *ngIf="verCantidadBandas() > 8; else elseBlock">Hay más de tres bandas</div>
+<ng-template #elseBlock>Hay menos de 8 bandas</ng-template>

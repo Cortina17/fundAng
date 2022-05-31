@@ -17,7 +17,7 @@ export class AppComponent {
 
 
   changeTitle() {
-    this.title = "Nuevo título";
+    this.title = "Nuevo título generado por componentes de angular que estan muy chachis";
   }
 
   verCantidadBandas(): number {

@@ -1,5 +1,5 @@
-<h1>HOOOLA</h1>
-<marquee>LOL</marquee>
+<h1 class="bg-primary text-center text-white p-3">HOOOLA</h1>
+<marquee class="bg-danger text-center">LOL</marquee>
 <h2>{{title}}</h2>
 <ul>
   <li>Uno</li>
@@ -7,7 +7,7 @@
   <li>{{1+2}}</li>
 </ul>
 
-<button (click)="changeTitle()">Nuevo título</button>
+<button (click)="changeTitle()" type="button" class="btn btn-warning">Nuevo título</button>
 
 <!--DIRECTIVAS DE ESTRUCTURA-->
 
@@ -23,7 +23,11 @@
 
 <!--*ngIf-->
 <div *ngIf="verCantidadBandas() > 8; else elseBlock">Hay más de una banda</div>
-<ng-template #elseBlock>Hay menos de 8 bandas</ng-template>
+<ng-template #elseBlock>
+  <div class="text-danger">
+    Hay menos de 8 bandas
+  </div>
+</ng-template>
 <br><br>
 
 <!--*ngSwitch-->
@@ -68,3 +72,31 @@ TWO WAY [()]
   <option value="Audi">Audi</option>
 </select>{{seleccion2}}
 <br>
+
+<br>
+<div class="card" style="width: 18rem">
+  <img class="bd-placeholder-img card-img-top"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/800px-Angular_full_color_logo.svg.png"
+    role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+  <title>Placeholder</title>
+
+  <div class="card-body">
+    <h5 class="card-title">Angular</h5>
+    <p class="card-text">
+      Angular is a platform for building mobile and desktop web
+      applications. Join the community of millions of developers who build
+      compelling user interfaces ...
+    </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Framework</li>
+    <li class="list-group-item">Library</li>
+    <li class="list-group-item">Life</li>
+  </ul>
+  <div class="card-body">
+    <a href="http://www.google.com" target="_blank" class="card-link">Google</a>
+    <a href="http://www.wikipedia.com" target="_blank" class="card-link">Wikipedia</a>
+    <a href="https://angular.io/" target="_blank" class="card-link">Angular</a>
+
+  </div>
+</div>

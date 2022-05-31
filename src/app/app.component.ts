@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular';
+  rockBands = ["ACDC", "Nirvana", "Metallica", "Guns n roses"];
 
 
-  changeTitle(){
-    this.title="Nuevo título";
+  changeTitle() {
+    this.title = "Nuevo título";
+  }
+
+  verCantidadBandas(): number {
+    return this.rockBands.length;
   }
 }
